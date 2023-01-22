@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 
+mongoose.set('strictQuery', false);
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const api = require('./routes/api/index');
@@ -14,8 +16,8 @@ var app = express();
 mongoose.Promise = global.Promise;
 
 //Adds connection to database using mongoose
-mongoose.connect('abrunst:Jell.o2022@cluster0.qdazkmh.mongodb.net/appointments', {
-    useMongoClient: true
+mongoose.connect('mongodb+srv://abrunst:Jell.o2022@cluster0.qdazkmh.mongodb.net/appointments', {
+    useNewUrlParser: true
 });
 //This enabled CORS, Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources (e.g. fonts) 
 //on a web page to be requested from another domain outside the domain from which the first resource was served

@@ -1,5 +1,6 @@
-const { Appointment, Slot } = Model;
-const Nexmo = require("nexmo");
+const { Appointment, Slot } = require('../models');
+
+const Nexmo = require('@vonage/server-sdk');
 const appointmentController = {
     all(req, res) {
         // Returns all appointments
