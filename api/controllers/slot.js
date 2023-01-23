@@ -1,4 +1,4 @@
-const { Appointment, Slot } = require('../models');
+const Slot = require('../models');
 const slotController = {
     all(req, res) {
         // Returns all Slots
