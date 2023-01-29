@@ -1,14 +1,33 @@
 {
-  "name": "appointment_scheduler",
-  "version": "1.0.0",
-  "description": "Capstone project for Angela Brunst",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Angela Brunst",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+    "name": "appointment_scheduler",
+    "version": "1.0.0",
+    "description": "Capstone project for Angela Brunst",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint",
+        "start": "nodemon app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Angela Brunst",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.2",
+        "nodemon": "^2.0.20"
+    },
+    "devDependencies": {
+        "eslint": "^8.33.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.27.5"
+    },
+    "nodemonConfig": {
+        "restartable": "rs",
+        "ignore": [
+            "node_modules/**/node_modules"
+        ],
+        "delay": 2500,
+        "env": {
+            "NODE_ENV": "development",
+            "PORT": 4000
+        }
+    }
 }

@@ -1,9 +1,10 @@
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 3000;
-app.get('/', function(req, res) {
+const express = require('express');
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.get('/', (req, res) => {
     res.send('Welcome to my API!');
 });
-app.listen(port, function() {
-    console.log('Running on https://localhost/' + port);
+app.listen(port, () => {
+    console.log(`Running on http://localhost:${port}`);
 });
